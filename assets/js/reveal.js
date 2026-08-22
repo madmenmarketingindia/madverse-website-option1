@@ -39,8 +39,7 @@
     ".deliverables--mobile",
     ".campaign-gallery__title",
     ".campaign-gallery__track > .campaign-gallery__item",
-    ".project-testimonial__card",
-    ".project-cta__panel"
+    ".project-testimonial__card"
   ];
 
   var items = Array.prototype.slice.call(document.querySelectorAll(selectors.join(",")));
