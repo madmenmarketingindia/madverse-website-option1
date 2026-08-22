@@ -1,0 +1,277 @@
+/* ==========================================================================
+   MADVERSE — DESIGN TOKENS
+   Single source of truth for color, type, spacing, motion and layout.
+   Do not hardcode raw values in component CSS — reference these tokens.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FONT FACES — Celias (company typeface)
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiashairline.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiashairlineitalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasthin.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasthinitalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiaslight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiaslightitalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celias.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasregularitalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasmedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasmediumitalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasbold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasbolditalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasblack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../fonts/celias/celiasblackitalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* --------------------------------------------------------------------
+     COLOR — sampled from reference/Home-desktop.png + Home-Mobile.png
+     -------------------------------------------------------------------- */
+
+  /* Base surfaces */
+  --color-black: #000000;           /* page background — true black */
+  --color-bg: #000000;
+  --color-bg-raised: #0a0a0a;       /* stacked panels, alt section bg */
+  --color-surface: #121110;         /* cards, tiles (sampled ~#141312) */
+  --color-surface-2: #17130f;       /* hover state of surface */
+  --color-border: rgba(255, 255, 255, 0.08);   /* hairline dividers */
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Brand red — sampled ~rgb(195,1,8) from CTA button + big M mark */
+  --color-red-700: #7a0006;         /* pressed */
+  --color-red-600: #950108;         /* hover / darker */
+  --color-red-500: #c40109;         /* PRIMARY — buttons, accents, eyebrow */
+  --color-red-400: #e6142a;         /* glow / gradient highlight */
+  --color-red-300: #ff3b4a;         /* rare, high-emphasis flash state */
+  --color-red-a10: rgba(196, 1, 9, 0.1);   /* red tints for glows/washes */
+  --color-red-a20: rgba(196, 1, 9, 0.2);
+  --color-red-a40: rgba(196, 1, 9, 0.4);
+
+  /* Text */
+  --color-text-primary: #ededed;    /* headings — near-white, not pure */
+  --color-text-white: #ffffff;      /* logo wordmark, max emphasis only */
+  --color-text-secondary: #8c8c8c;  /* body copy / paragraphs */
+  --color-text-tertiary: #6e6e6e;   /* meta, idle nav, timestamps */
+  --color-text-on-red: #000000;     /* text sitting on red fill */
+  --color-text-disabled: #4a4a4a;
+
+  /* Feedback (not in refs, kept consistent with brand for future forms) */
+  --color-success: #1fb56a;
+  --color-error: var(--color-red-500);
+
+  /* --------------------------------------------------------------------
+     TYPOGRAPHY
+     -------------------------------------------------------------------- */
+  --font-family-base: "Celias", "Helvetica Neue", Arial, sans-serif;
+
+  --fw-hairline: 100;
+  --fw-thin: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Fluid type scale — clamp(mobile, fluid, desktop), viewport 375→1440 */
+  --fs-display:   clamp(2.25rem, 1.6rem + 3.5vw, 3.75rem);   /* 36px → 60px  — hero H1 */
+  --fs-h1:        clamp(2.25rem, 1.6rem + 3.2vw, 3.5rem);    /* 36px → 56px  — page H1 */
+  --fs-h2:        clamp(1.75rem, 1.3rem + 2.2vw, 2.75rem);   /* 28px → 44px  — section heading */
+  --fs-h3:        clamp(1.375rem, 1.1rem + 1.4vw, 1.875rem); /* 22px → 30px  — card / subsection heading */
+  --fs-h4:        clamp(1.125rem, 1rem + 0.6vw, 1.375rem);   /* 18px → 22px  — small heading */
+  --fs-stat:       clamp(2.25rem, 1.5rem + 3.75vw, 3rem);    /* 36px → 48px  — big numbers (250+) */
+  --fs-body-lg:   clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);  /* 16px → 17px  — intro paragraphs */
+  --fs-body:      1rem;                                       /* 16px — default paragraph */
+  --fs-body-sm:   0.9375rem;                                  /* 15px — dense/mobile paragraph */
+  --fs-caption:   0.8125rem;                                  /* 13px — nav links, button labels */
+  --fs-label:     0.75rem;                                    /* 12px — eyebrow / stat label */
+  --fs-micro:     0.6875rem;                                  /* 11px — legal, fine print */
+
+  --lh-tight: 1.05;    /* display / H1 headings */
+  --lh-heading: 1.15;  /* H2–H4 */
+  --lh-body: 1.6;      /* paragraphs */
+  --lh-caption: 1.4;   /* nav, labels */
+
+  --ls-tight: -0.01em;   /* large display headings */
+  --ls-normal: 0;
+  --ls-wide: 0.04em;     /* buttons, nav links */
+  --ls-widest: 0.12em;   /* eyebrow labels, stat labels (uppercase, small) */
+
+  /* --------------------------------------------------------------------
+     SPACING — 4px base unit
+     -------------------------------------------------------------------- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 2.5rem;    /* 40px */
+  --space-8: 3rem;      /* 48px */
+  --space-9: 4rem;      /* 64px */
+  --space-10: 5rem;     /* 80px */
+  --space-11: 6rem;     /* 96px */
+  --space-12: 7.5rem;   /* 120px */
+  --space-13: 10rem;    /* 160px */
+
+  /* Section rhythm — fluid vertical padding, mobile → desktop */
+  --section-py: clamp(3rem, 2rem + 4vw, 7.5rem);        /* 48px → 120px */
+  --section-py-sm: clamp(2rem, 1.6rem + 2vw, 4rem);     /* 32px → 64px  (tight sections: stats bar) */
+  --section-gap: clamp(0.5rem, 0.3rem + 0.8vw, 1rem);   /* hairline-to-content gap */
+
+  /* Page gutters — fluid horizontal padding */
+  --gutter: clamp(0.75rem, 0.5rem + 2.2vw, 3.75rem);    /* ~12px → 60px */
+
+  /* Container */
+  /* Fluid: fills laptop screens like the old fixed 1280px did, but keeps
+     scaling on larger monitors instead of leaving fixed dead margins —
+     92vw up to a 1720px ceiling (past which lines would get too wide to
+     read comfortably). */
+  --container-max: clamp(20rem, 92vw, 1720px);
+  --container-wide: 1440px; /* full-bleed sections (footer M mark, hero visual) */
+
+  /* Header height — single source, referenced by both the sticky bar and the
+     mobile overlay's top padding (so they can never drift out of sync) */
+  --header-h-mobile: 88px;
+  --header-h-desktop: 92px;
+
+  /* --------------------------------------------------------------------
+     RADIUS — mostly sharp; brand personality is angular, not soft
+     -------------------------------------------------------------------- */
+  --radius-none: 0;
+  --radius-sm: 2px;     /* buttons — near-sharp */
+  --radius-md: 6px;     /* cards, image tiles */
+  --radius-lg: 12px;    /* large media blocks */
+  --radius-full: 999px; /* pills, avatar/logo chips only */
+
+  /* --------------------------------------------------------------------
+     ELEVATION / GLOW — this UI has no soft drop-shadows, it has red glows
+     -------------------------------------------------------------------- */
+  --glow-red-sm: 0 0 24px var(--color-red-a20);
+  --glow-red-md: 0 0 48px var(--color-red-a20);
+  --glow-red-lg: 0 0 96px var(--color-red-a10);
+  --shadow-card: 0 1px 0 var(--color-border) inset;
+
+  /* --------------------------------------------------------------------
+     MOTION
+     -------------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* scroll reveals, entrances */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* hover/interaction */
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  --duration-fast: 150ms;    /* micro (link underline, icon nudge) */
+  --duration-base: 250ms;    /* hover states, color transitions */
+  --duration-slow: 400ms;    /* card lift, menu open */
+  --duration-reveal: 700ms;  /* scroll-triggered section reveal */
+
+  /* --------------------------------------------------------------------
+     BREAKPOINTS (reference only — for use in media queries, min-width)
+     mobile: 0–479 · sm: 480 · md: 768 · lg: 1024 · xl: 1280 · xxl: 1440
+     -------------------------------------------------------------------- */
+
+  /* --------------------------------------------------------------------
+     Z-INDEX SCALE
+     -------------------------------------------------------------------- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-overlay: 500;
+  --z-header: 600;   /* above --z-overlay so the header (and its close button) stays clickable while the mobile menu is open */
+  --z-modal: 900;
+  --z-toast: 1000;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Consistent, tighter vertical rhythm for every desktop section. */
+    --section-py: 3.5rem;
+  }
+}
