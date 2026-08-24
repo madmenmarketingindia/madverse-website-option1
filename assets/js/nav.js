@@ -22,6 +22,11 @@
     var isMobile = list.classList.contains("mobile-menu__list");
     var linkClass = isMobile ? "mobile-menu__link" : "primary-nav__link";
     var existingCareersLink = list.querySelector('a[href="careers.html"]');
+    var workLink = Array.prototype.find.call(list.querySelectorAll("a"), function (link) {
+      return link.textContent.trim() === "Work";
+    });
+
+    if (workLink) workLink.href = "work.html";
 
     if (!isMobile && existingCareersLink) {
       existingCareersLink.closest("li").remove();
