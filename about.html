@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Madverse</title>
+  <meta name="description" content="Meet Madverse, a growth collective built on curiosity, collaboration and measurable impact." />
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/buttons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner container">
+      <a href="index.html" class="brand" aria-label="Madverse — home">
+        <img src="assets/img/logo.png" alt="Madverse — The Growth Collective" class="brand__logo" width="512" height="366" />
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a href="index.html" class="primary-nav__link">Home</a></li>
+          <li><a href="index.html#work" class="primary-nav__link">Work</a></li>
+          <li><a href="collective.html" class="primary-nav__link">Collective</a></li>
+          <li><a href="think.html" class="primary-nav__link">Think</a></li>
+          <li><a href="culture.html" class="primary-nav__link">Culture</a></li>
+          <li><a href="about.html" class="primary-nav__link is-active" aria-current="page">About</a></li>
+          <li><a href="contact.html" class="primary-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="contact.html" class="btn btn--primary site-header__cta">
+          Start a Conversation <span class="btn__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+        >
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html" class="mobile-menu__link">Home</a></li>
+        <li><a href="index.html#work" class="mobile-menu__link">Work</a></li>
+        <li><a href="collective.html" class="mobile-menu__link">Collective</a></li>
+        <li><a href="think.html" class="mobile-menu__link">Think</a></li>
+        <li><a href="culture.html" class="mobile-menu__link">Culture</a></li>
+        <li><a href="about.html" class="mobile-menu__link is-active" aria-current="page">About</a></li>
+        <li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <a href="contact.html" class="btn btn--primary mobile-menu__cta">
+        Start a Conversation <span class="btn__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <div class="mobile-menu__socials">
+        <a href="#" class="mobile-menu__social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.3 8.75h3.4V21H3.3V8.75Zm6.2 0h3.26v1.68h.05c.45-.86 1.56-1.77 3.22-1.77 3.44 0 4.08 2.27 4.08 5.22V21h-3.4v-6.4c0-1.53-.03-3.5-2.13-3.5-2.14 0-2.47 1.67-2.47 3.39V21H9.5V8.75Z" fill="currentColor" />
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
+            <circle cx="17.25" cy="6.75" r="1.15" fill="currentColor" />
+          </svg>
+        </a>
+        <a href="mailto:hello@madverse.com" class="mobile-menu__social-link" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6" />
+            <path d="m4 6.5 8 6.2 8-6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="about-hero" aria-labelledby="about-hero-title">
+      <div class="about-hero__inner container">
+        <div class="about-hero__layout">
+          <div class="about-hero__content">
+            <h1 class="about-hero__title" id="about-hero-title">
+              We are Madverse<span class="text-red">.</span><br />
+              A growth collective<span class="text-red">.</span>
+            </h1>
+
+            <span class="about-hero__rule" aria-hidden="true"></span>
+
+            <p class="about-hero__lede">
+              We’re not an agency. We’re a collective of dreamers, thinkers and doers who believe in brave ideas, meaningful work and measurable impact.
+            </p>
+
+            <a href="#our-story" class="btn btn--primary about-hero__cta">
+              Our story <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <figure class="about-hero__visual">
+            <img
+              src="assets/img/about/about-hero-office.png"
+              alt="A collaborative creative office with a glowing red Madverse M"
+              width="1823"
+              height="863"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-stats" aria-label="Madverse at a glance">
+      <div class="container">
+        <ul class="about-stats__list">
+          <li class="about-stat">
+            <svg class="about-stat__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="12" cy="10" r="5" stroke="currentColor" />
+              <circle cx="22" cy="11" r="4" stroke="currentColor" />
+              <path d="M3 27c.7-6 4-9 9-9s8.3 3 9 9M18 19c5 0 8 2.7 9 8" stroke="currentColor" stroke-linecap="round" />
+            </svg>
+            <div><strong>2018</strong><span>Founded</span></div>
+          </li>
+          <li class="about-stat">
+            <svg class="about-stat__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" />
+              <path d="M3 16h26M16 3c4 4 6 8 6 13s-2 9-6 13c-4-4-6-8-6-13s2-9 6-13Z" stroke="currentColor" />
+            </svg>
+            <div><strong>80+</strong><span>Brands partnered</span></div>
+          </li>
+          <li class="about-stat">
+            <svg class="about-stat__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="m16 3 3.8 8 8.7 1.1-6.4 6 1.7 8.6-7.8-4.2-7.8 4.2 1.7-8.6-6.4-6 8.7-1.1L16 3Z" stroke="currentColor" stroke-linejoin="round" />
+            </svg>
+            <div><strong>250+</strong><span>Campaigns delivered</span></div>
+          </li>
+          <li class="about-stat">
+            <svg class="about-stat__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M4 27V17h6v10M13 27V11h6v16M22 27V6h6v21M4 11l7-5 5 3 11-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div><strong>25+</strong><span>Industries served</span></div>
+          </li>
+          <li class="about-stat">
+            <svg class="about-stat__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 28S4 21 4 11.5C4 7 7 4 11 4c2.5 0 4.2 1.2 5 3 1-1.8 2.7-3 5-3 4 0 7 3 7 7.5C28 21 16 28 16 28Z" stroke="currentColor" stroke-linejoin="round" />
+            </svg>
+            <div><strong>1</strong><span>Collective spirit</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-story" id="our-story" aria-labelledby="about-story-title">
+      <div class="about-story__inner container">
+        <div class="about-story__content">
+          <p class="eyebrow">Our story</p>
+          <h2 class="section-title about-story__title" id="about-story-title">
+            Built on curiosity<span class="text-red">.</span><br />
+            Driven by purpose<span class="text-red">.</span>
+          </h2>
+
+          <div class="about-story__copy">
+            <p>
+              Madverse began with a simple belief — that creativity, when combined with strategy, can move people, brands and businesses forward.
+            </p>
+            <p>
+              Today, we’re a collective of specialists across strategy, content, design, technology and media — united by one purpose: to create meaningful impact.
+            </p>
+          </div>
+        </div>
+
+        <figure class="about-story__visual">
+          <img
+            src="assets/img/about/about-story-team.png"
+            alt="A creative team collaborating over campaign concepts in a studio"
+            width="1731"
+            height="909"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="about-values" aria-labelledby="about-values-title">
+      <div class="about-values__inner container">
+        <div class="about-values__heading">
+          <p class="eyebrow">What drives us</p>
+          <h2 class="section-title" id="about-values-title">Our values<span class="text-red">.</span></h2>
+          <span class="about-values__swipe-hint">Swipe to explore <span aria-hidden="true">→</span></span>
+        </div>
+
+        <ul class="about-values__list">
+          <li class="about-value">
+            <svg class="about-value__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 23h10M12 27h8M10 20c-2-2-4-4-4-8a10 10 0 0 1 20 0c0 4-2 6-4 8-1 1-1 2-1 3H11c0-1 0-2-1-3Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 1v-1M4 5 2 3M28 5l2-2M3 15H0M32 15h-3" stroke="currentColor" stroke-linecap="round" />
+            </svg>
+            <div>
+              <h3>Be curious</h3>
+              <p>We question, explore and never stop learning.</p>
+            </div>
+          </li>
+          <li class="about-value">
+            <svg class="about-value__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="11" cy="9" r="5" stroke="currentColor" />
+              <circle cx="22" cy="10" r="4" stroke="currentColor" />
+              <path d="M2 27c1-6 4-10 9-10s8 4 9 10M18 18c6 0 10 3 11 9" stroke="currentColor" stroke-linecap="round" />
+            </svg>
+            <div>
+              <h3>Build together</h3>
+              <p>We collaborate, uplift and win as one collective.</p>
+            </div>
+          </li>
+          <li class="about-value">
+            <svg class="about-value__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="m19 2-11 16h8l-3 12 11-17h-8l3-11Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div>
+              <h3>Be bold</h3>
+              <p>We take bold calls and challenge the status quo.</p>
+            </div>
+          </li>
+          <li class="about-value">
+            <svg class="about-value__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M3 27 13 17l6 5L29 8M21 8h8v8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div>
+              <h3>Drive impact</h3>
+              <p>We measure success by the impact we create for brands and people.</p>
+            </div>
+          </li>
+          <li class="about-value">
+            <svg class="about-value__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 28S4 21 4 11.5C4 7 7 4 11 4c2.5 0 4.2 1.2 5 3 1-1.8 2.7-3 5-3 4 0 7 3 7 7.5C28 21 16 28 16 28Z" stroke="currentColor" stroke-linejoin="round" />
+            </svg>
+            <div>
+              <h3>Be real</h3>
+              <p>We keep it real with honesty and transparency.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-difference" aria-labelledby="about-difference-title">
+      <div class="about-difference__inner container">
+        <div class="about-difference__intro">
+          <p class="eyebrow">Why Madverse</p>
+          <h2 class="section-title about-difference__title" id="about-difference-title">
+            Built differently<span class="text-red">.</span><br />
+            To build better<span class="text-red">.</span>
+          </h2>
+          <p class="about-difference__lede">
+            We bring focused specialists together around one ambition, creating a connected system that moves with greater clarity, speed and impact.
+          </p>
+        </div>
+
+        <ol class="about-difference__steps">
+          <li class="about-difference__step">
+            <div class="about-difference__step-head">
+              <span class="about-difference__number">01</span>
+              <svg class="about-difference__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 4 34 12v16L20 36 6 28V12L20 4Z" stroke="currentColor" />
+                <path d="M13 24V16h5v8m4 0V12h5v12" stroke="currentColor" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Specialist expertise</h3>
+            <p>Deep capability across strategy, creativity, content, media and technology—not diluted generalism.</p>
+          </li>
+
+          <li class="about-difference__step">
+            <div class="about-difference__step-head">
+              <span class="about-difference__number">02</span>
+              <svg class="about-difference__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <circle cx="12" cy="20" r="6" stroke="currentColor" />
+                <circle cx="28" cy="12" r="6" stroke="currentColor" />
+                <circle cx="28" cy="28" r="6" stroke="currentColor" />
+                <path d="m17 17 6-3m-6 9 6 3" stroke="currentColor" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>One connected team</h3>
+            <p>The right minds work as one from the start, reducing handoffs and keeping every decision aligned.</p>
+          </li>
+
+          <li class="about-difference__step">
+            <div class="about-difference__step-head">
+              <span class="about-difference__number">03</span>
+              <svg class="about-difference__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M6 33V21h7v12m4 0V15h7v18m4 0V8h7v25" stroke="currentColor" stroke-linecap="round" />
+                <path d="m7 13 9-6 7 4 11-7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Measurable growth</h3>
+            <p>Ideas are connected to outcomes, so the work creates meaningful momentum for brands and people.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="people about-people" id="people" aria-labelledby="about-people-title">
+      <div class="container people__inner">
+        <div class="people__content about-people__content">
+          <div>
+            <p class="eyebrow">The people</p>
+            <h2 class="section-title about-people__title" id="about-people-title">
+              The people behind<br />Madverse<span class="text-red">.</span>
+            </h2>
+          </div>
+          <p class="about-people__lede">
+            Different disciplines, perspectives and personalities—connected by curiosity and a shared ambition to make work that matters.
+          </p>
+        </div>
+
+        <ul class="people__gallery" aria-label="The people behind Madverse">
+          <li class="people__card">
+            <img src="assets/img/people/people-conversation.png" alt="Two creative colleagues in conversation" width="492" height="494" loading="lazy" />
+          </li>
+          <li class="people__card">
+            <img src="assets/img/people/people-creative-work.png" alt="A creative specialist working at a laptop" width="492" height="494" loading="lazy" />
+          </li>
+          <li class="people__card">
+            <img src="assets/img/people/people-production.png" alt="A creative director working on a production" width="492" height="494" loading="lazy" />
+          </li>
+          <li class="people__card">
+            <img src="assets/img/people/people-studio.png" alt="Team members walking through a production studio" width="492" height="494" loading="lazy" />
+          </li>
+          <li class="people__card">
+            <img src="assets/img/people/people-lighting.png" alt="A filmmaker preparing a studio light" width="492" height="494" loading="lazy" />
+          </li>
+          <li class="people__card">
+            <img src="assets/img/people/people-team.png" alt="The creative collective together" width="492" height="494" loading="lazy" />
+          </li>
+        </ul>
+
+        <a href="collective.html" class="link-arrow people__link">Meet the collective <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="next-step" id="contact">
+      <div class="container next-step__inner">
+        <div class="next-step__content">
+          <p class="eyebrow"><span class="eyebrow__num">05</span>Let’s Build What’s Next</p>
+          <h2 class="section-title next-step__title">Let’s build<br />what’s next<span class="text-red">.</span></h2>
+          <p class="next-step__lede">Have a brand to grow, a challenge to solve or something worth building?</p>
+
+          <div class="next-step__actions">
+            <a href="mailto:hello@madverse.co" class="btn btn--primary">
+              Start a conversation <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="collective.html" class="link-arrow">Explore the collective <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="next-step__visual" aria-hidden="true">
+          <img src="assets/img/next-step-building.png" alt="" width="863" height="1823" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a href="index.html" aria-label="Madverse home">
+          <img src="assets/img/logo.png" alt="Madverse — The Growth Collective" class="site-footer__logo" width="512" height="366" />
+        </a>
+        <p>One ecosystem. Endless growth.</p>
+        <div class="site-footer__socials">
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.3 8.8h3.4V21H3.3V8.8Zm6.2 0h3.3v1.7c.7-1.2 1.9-1.9 3.3-1.8 3.4 0 4.1 2.3 4.1 5.2V21h-3.4v-6.4c0-1.5 0-3.5-2.1-3.5s-2.5 1.7-2.5 3.4V21H9.5V8.8Z" fill="currentColor" /></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7" /><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7" /><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" /></svg>
+          </a>
+          <a href="mailto:hello@madverse.co" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7" /><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="site-footer__group site-footer__collective" aria-label="Collective">
+        <h2>Collective</h2>
+        <ul>
+          <li><a href="#">Mad Men Marketing <span>↗</span></a></li>
+          <li><a href="#">Mad Men Advertising <span>↗</span></a></li>
+          <li><a href="#">Mad Men Design <span>↗</span></a></li>
+          <li><a href="#">Mad Men Productions <span>↗</span></a></li>
+          <li><a href="#">Madly Talented <span>↗</span></a></li>
+          <li><a href="#">Mad Men Technologies <span>↗</span></a></li>
+          <li><a href="#">Mecca <span>↗</span></a></li>
+          <li><a href="#">Mad Acad <span>↗</span></a></li>
+          <li><a href="#">Mad Men Perform <span>↗</span></a></li>
+          <li><a href="#">Mad AI Lab <span>↗</span></a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__group site-footer__explore" aria-label="Explore">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html#work">Work <span>↗</span></a></li>
+          <li><a href="collective.html">Collective <span>↗</span></a></li>
+          <li><a href="think.html">Think <span>↗</span></a></li>
+          <li><a href="culture.html">Culture <span>↗</span></a></li>
+          <li><a href="about.html" aria-current="page">About <span>↗</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__legal">
+        <p class="site-footer__copyright"><span>© Madverse 2025</span><span>All rights reserved</span></p>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/reveal.js"></script>
+</body>
+</html>
