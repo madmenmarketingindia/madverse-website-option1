@@ -14,6 +14,41 @@
 
   if (!header) return;
 
+  /* Keep primary navigation destinations uniform across older page shells. */
+  var currentPage = window.location.pathname.split("/").pop() || "index.html";
+  var navLists = document.querySelectorAll(".primary-nav__list, .mobile-menu__list");
+
+  navLists.forEach(function (list) {
+    var isMobile = list.classList.contains("mobile-menu__list");
+    var linkClass = isMobile ? "mobile-menu__link" : "primary-nav__link";
+    var existingCareersLink = list.querySelector('a[href="careers.html"]');
+
+    if (!isMobile && existingCareersLink) {
+      existingCareersLink.closest("li").remove();
+    }
+
+    if (!list.querySelector('a[href="collective.html"]')) {
+      var collectiveItem = document.createElement("li");
+      collectiveItem.innerHTML = '<a href="collective.html" class="' + linkClass + '">Collective</a>';
+      list.appendChild(collectiveItem);
+    }
+
+    if (isMobile && !existingCareersLink) {
+      var careersItem = document.createElement("li");
+      var activeAttributes = currentPage === "careers.html" ? ' is-active" aria-current="page"' : '"';
+      careersItem.innerHTML = '<a href="careers.html" class="' + linkClass + activeAttributes + '>Careers</a>';
+      list.appendChild(careersItem);
+    }
+  });
+
+  document.querySelectorAll(".site-footer__explore ul").forEach(function (list) {
+    if (list.querySelector('a[href="careers.html"]')) return;
+
+    var careersItem = document.createElement("li");
+    careersItem.innerHTML = '<a href="careers.html">Careers <span aria-hidden="true">↗</span></a>';
+    list.appendChild(careersItem);
+  });
+
   /* -- Scrolled state -- */
   var SCROLL_THRESHOLD = 8;
 
