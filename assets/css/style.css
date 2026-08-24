@@ -6037,6 +6037,75 @@
   color: var(--color-text-on-red);
 }
 
+/* Homepage Thinking: three equal editorial cards in one desktop row. */
+@media (min-width: 1024px) {
+  .thinking__inner {
+    grid-template-columns: 1fr;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .thinking__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: var(--space-6);
+  }
+
+  .thinking__content .eyebrow {
+    grid-column: 1 / -1;
+  }
+
+  .thinking__content .section-title {
+    max-width: 14ch;
+  }
+
+  .thinking__link {
+    margin: 0 0 0.25rem;
+  }
+
+  .thinking__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .thinking__list > li:nth-child(n + 4) {
+    display: none;
+  }
+
+  .thinking__card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: var(--color-bg-raised);
+  }
+
+  .thinking__card-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 0;
+  }
+
+  .thinking__card-row {
+    flex: 1;
+    gap: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .thinking__card-title {
+    font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+  }
+
+  .thinking__card-desc {
+    max-width: 28ch;
+    margin-top: var(--space-2);
+  }
+}
+
 @media (max-width: 767px) {
   .specialists__inner {
     gap: var(--space-6);
